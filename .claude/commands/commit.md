@@ -7,8 +7,8 @@ allowed-tools:
   - Bash(git commit:*)
   - Bash(git push:*)
   - Bash(git branch:*)
+  - Bash(git diff --staged:*)
 ---
-
 1. First, run `git diff` to see all changes (both staged and unstaged)
 2. Analyze the diff to understand what changed
 3. Write a commit message following the Conventional Commits standard based on the diff:
