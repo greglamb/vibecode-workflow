@@ -48,7 +48,7 @@ Two marketplace plugins are enabled by default:
    /plugin install episodic-memory@superpowers-marketplace
    ```
 
-4. **Define your standards** — Edit `.claude/skills/project-standards/SKILL.md` (currently `TBD`) with your project's coding conventions, linting rules, and architectural guidelines. This skill is invoked before any code is written or modified. For guidance on writing effective skills, see the [Anthropic Skill Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) or the [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) community collection.
+4. **Define your standards** — Edit `.claude/skills/project-standards/SKILL.md` (currently `TBD`) with your project's coding conventions, linting rules, and architectural guidelines. This skill is invoked before any code is written or modified. For help authoring skills, try using the [Anthropic Skill Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) or the [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) tool.
 
 5. **Add reference files** — Drop style guides, API specs, or other reference material into `.claude/skills/project-standards/references/`.
 
@@ -75,7 +75,7 @@ Your prompt instructions here
 
 ### Adding Skills
 
-Create a directory under `.claude/skills/` with a `SKILL.md` file and an optional `references/` folder for supporting docs. For help authoring skills, check out the [Anthropic Skill Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) or the [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) tool.
+Create a directory under `.claude/skills/` with a `SKILL.md` file and an optional `references/` folder for supporting docs. For help authoring skills, try using the [Anthropic Skill Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) or the [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) tool.
 
 ### Restricting Tool Access
 
