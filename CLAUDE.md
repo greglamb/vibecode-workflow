@@ -1,7 +1,48 @@
 # Project Guidelines
 
-## Required Skills
+## Required Skills and Workflows
 - **project-standards**: MUST be invoked before writing or modifying ANYTHING
+
+### Skill Usage Rules
+
+- If there is even a 1% chance a skill applies, invoke it.
+- Read the SKILL.md file for each skill before using it.
+- Announce each skill by name when activating it: "I'm using the [skill] skill to [purpose]."
+- If a skill has a checklist, create a TodoWrite item per checklist entry.
+- If a skill fails to activate, stop and report which skill did not trigger rather than continuing without it.
+
+### Development Process
+
+1. **Brainstorm** (`superpowers:brainstorming`) — Always start here, even for "simple" tasks. Explore project context (files, docs, recent commits). Ask clarifying questions one at a time. Propose 2-3 approaches with trade-offs. Before proposing approaches, read and follow the `project-standards` skill to ensure all designs conform to project architecture and coding standards. Present design in sections scaled to complexity, get approval after each section. Save design doc to `docs/plans/YYYY-MM-DD-<topic>-design.md` and commit.
+
+2. **Worktree** (`superpowers:using-git-worktrees`) — After design approval, create an isolated worktree. Run project setup and verify clean test baseline before writing any code. Announce ready status with test count.
+
+3. **Plan** (`superpowers:writing-plans`) — Break work into 2-5 minute tasks with exact file paths, complete code, and verification steps. All planned code must conform to the `project-standards` skill. Reference it when specifying file paths, code structure, and API usage in tasks. Save plan to `docs/plans/YYYY-MM-DD-<feature-name>.md`. Each task must include: files to create/modify, failing test to write, minimal implementation, verification command, and commit step.
+
+4. **Execute** (`superpowers:subagent-driven-development`) — Always use subagent-driven development. Never use batch execution. Never ask which mode to use. Dispatch fresh subagent per task with two-stage review (spec compliance, then code quality).
+
+5. **TDD** (`superpowers:test-driven-development`) — Every task follows strict RED-GREEN-REFACTOR. Write failing test first, run it and watch it fail, write minimal code, run it and watch it pass, commit. Code written before its test must be deleted. No exceptions. No rationalizations.
+
+6. **Code Review** (`superpowers:requesting-code-review`) — Review between tasks. Check against plan. Report issues by severity. Critical issues block progress. Review must verify conformance with `project-standards` skill. Violations of project architecture or coding standards are critical issues that block progress.
+
+7. **Finish** (`superpowers:finishing-a-development-branch`) — Verify all tests pass. Present options: merge, PR, keep branch, or discard. Clean up worktree.
+
+### Debugging (when issues arise during implementation)
+
+- Use `superpowers:systematic-debugging` for any non-trivial bug — 4-phase root cause process. Do not guess-and-check.
+- Use `superpowers:verification-before-completion` before declaring any fix complete.
+
+### Additional Rules
+
+- Commit after each passing task, not at the end.
+- YAGNI — ruthlessly remove unnecessary features from designs.
+- Stop immediately on blockers. Ask for clarification rather than guessing.
+- When receiving code review feedback, use `superpowers:receiving-code-review`.
+- Do not skip worktree setup. Do not skip TDD. Do not skip code review.
+
+### Worktree Preferences
+
+Worktree directory: .worktrees/
 
 ## Documentation Requirements
 - **CHANGELOG.md**: ALL user-facing changes MUST be documented in CHANGELOG.md (root)
